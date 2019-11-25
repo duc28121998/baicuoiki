@@ -21,24 +21,24 @@ export class AssignmentloginComponent implements OnInit {
   student = [
     {
       "id": 1,
-      "name": 'phieu',
-      "pass": '123'
+      "name": 'congduc',
+      "pass": '111'
     },
     {
       "id": 2,
-      "name": 'phieupro',
-      "pass": '123'
+      "name": 'ngochai',
+      "pass": '222'
     },
     {
       "id": 3,
-      "name": 'phieu1234phieu',
-      "pass": '123'
+      "name": 'huynhcongduc',
+      "pass": '111'
     }
     ,
     {
       "id": 4,
-      "name": 'phieuprokute',
-      "pass": '1234'
+      "name": 'duc',
+      "pass": '111'
     }
   ]
   onsubmit(signin) {
@@ -57,7 +57,7 @@ export class AssignmentloginComponent implements OnInit {
     var tktrue;
     for (const element of this.student) {
       console.log(element);
-      if (this.uname == 'phieu' && this.pass == '123') {
+      if (this.uname == 'duc' && this.pass == '111') {
         tktrue = 1;
         console.log(element.name);
 
@@ -68,9 +68,10 @@ export class AssignmentloginComponent implements OnInit {
       }
     }
     if (tktrue == 1) {
-      alert('Tài Khoản mật khẩu chính xác !!!');
+      alert('Logged in successfully !!!');
+      location.href = "/danhmucmh";
     } else {
-      alert('Sai tài khoản hoặc mật khẩu !!!');
+      alert('Wrong account or password !!!');
     }
   }
 }

@@ -1,41 +1,39 @@
-<!-- <div class="container">
-    <img src="../assets/images/danhmuc3.jpg" style="width: 100% ; height: 200px;">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+    <img src="../assets/images/it1.png" style="width: 100% ; height: 250px;">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: space-between">
+        <div class="collapse navbar-collapse" id="navbarNav" style="background-attachment: fixed;;background: black;"  >
             <ul class="navbar-nav">
                 <li class="nav-item">
-
-                    <a class="nav-link" href="trangchu"> <i class='fas fa-home' style='font-size:20px'></i> Trang
+                    <a class="nav-link" href="trangchu"  style='font-size:30px'> <i class='fas fa-home'></i>Trang
                         Chủ</a>
                 </li>
                 <li class="nav-item ">
-
-                    <a class="nav-link" href="gioithieu/"><i style="font-size:20px" class="fa">&#xf03a;</i> Giới Thiệu
+                    <a class="nav-link" href="gioithieu"  style='font-size:30px'><i class="fa">&#xf03a;</i>Giới Thiệu
                         <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="lienhe"><i class='fas fa-phone' style='font-size:20px'></i>
+                    <a class="nav-link" href="lienhe"  style='font-size:30px'><i class='fas fa-phone' ></i>
                         Liên Hệ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="gopy"><i class='far fa-envelope' style='font-size:20px'></i> Góp
+                    <a class="nav-link" href="gopy"  style='font-size:30px'><i class='far fa-envelope' ></i> Góp
                         Ý</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hoidap" tabindex="-1" aria-disabled="true"><i
-                            class='far fa-question-circle' style='font-size:20px'></i>
+                    <a class="nav-link" href="hoidap" tabindex="-1" aria-disabled="true"  style='font-size:30px'><i
+                            class='far fa-question-circle' ></i>
                         Hỏi Đáp</a>
                 </li>
 
             </ul>
             <div class="btn-group" style="float: right">
                 <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Tài Khoản
+                    aria-haspopup="true" aria-expanded="false" style="background: blanchedalmond;color: black;margin-top: 10px;">
+                    LoGin
                 </button>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="login">Đăng Nhập</a>
@@ -43,9 +41,9 @@
                     <a class="dropdown-item" href="doimk">Đổi Mật Khẩu</a>
                     <a class="dropdown-item" href="quenmk">Quên Mật Khẩu</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="suatk">Sửa Đổi Tài Khoản</a>
-                    <a class="dropdown-item" href="danhmucmh">Danh Mục môn Học</a>
-                    <a class="dropdown-item" href="thitn">Thi Trắc Nghiệm</a>
+                    <a class="dropdown-item" href="#">Sửa Tài Khoản</a>
+                    <a class="dropdown-item" href="danhmucmh">Môn Học</a>
+                    <a class="dropdown-item" href="thitn">Phần Thi Trắc Nghiệm</a>
                 </div>
             </div>
         </div>
@@ -53,82 +51,108 @@
 
     <br>
 
-    <div class="row" [hidden]="a">
+    <div class="row">
         <div class="col-md-8">
+            <form>
+                <div class="row" style="margin-top: 50px">
+                    <h2>Kiểm Tra lập trình Android</h2><br>
 
-            <h1 class="text-center text-dark">{{ sub.name }}</h1>
 
-            <table class="table" style="border: none">
-                <tbody>
-                    <tr *ngFor="let subject of listSubjects | paginate:config;">
-                        <td>
-                            <div class="card" style="border: none">
-                                <div class="card-title" style="font-family: 'Prata', serif; ">
-                                    <strong><span style="color: #222; font-weight: 500"> Sentence
-                                            {{ config.currentPage  }}/{{listSubjects.length }}: </span><span
-                                            style="font-size: 1.1em; font-weight: bold"> {{ subject.Text }}
-                                        </span></strong>
-                                </div>
 
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" value="a" name="php">
-                                        {{ subject.Answers[0].Text}}
-                                        {{subject.Answers[0].Value}}
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" value="b" name="php">
-                                        {{ subject.Answers[1].Text}}
-                                        {{ subject.Answers[1].Value}}
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" value="c" name="php">
-                                        {{ subject.Answers[2].Text}}
-                                        {{subject.Answers[2].Value}}
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" value="d" name="php">
-                                        {{ subject.Answers[3].Text}}
-                                        {{subject.Answers[3].Value}}
-                                    </label>
-                                </div>
-                                <div class="radio disabled">
-                                    <label>
-                                        <input type="radio" value="c" disabled>
-                                        Assignment
-                                    </label>
-                                </div>
+                </div>
 
+                <div class="container-fluid row" style="margin-bottom: 50px;" [hidden]="hiden"><br>
+                    <div class="col-md-9">
+                        <div class="mar-left">
+                            <h5 class="text-right" style="font-family: 'VT323', monospace;"><span
+                                    style="font-weight: bold; font-family: 'Fira Code', monospace;">Time:</span>
+                                {{format(time)}}
+                            </h5>
+                            <div class="card">
+                                <div class="card-header">MuaITC</div>
+
+                                <div class="card-body">
+                                    <table class="table">
+                                        <tbody
+                                            *ngFor="let questions of question | orderBy: nameno | paginate: { itemsPerPage: itempage, currentPage: p }">
+
+                                            <tr>
+                                                <td>{{questions.stt}}.{{questions.debai}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>{{questions.cauhoi}} </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    [ngStyle]="{'background-color': (a == questions.valuetrue)? colortrue:(a == questions.value)?colorfalse:'white' }">
+                                                    <b class="fa"><input type="radio" [name]="questions.value" value="a"
+                                                            [(ngModel)]="questions.value">
+                                                        A.</b>{{questions.a}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    [ngStyle]="{'background-color': (b == questions.valuetrue) ? colortrue:(b == questions.value)?colorfalse:'white' }">
+                                                    <b class="fa"><input type="radio" [name]="questions.value" value="b"
+                                                            [(ngModel)]="questions.value">
+                                                        B.</b>{{questions.b}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    [ngStyle]="{'background-color': (c == questions.valuetrue) ?colortrue:(c == questions.value)?colorfalse:'white' }">
+                                                    <b class="fa"><input type="radio" [name]="questions.value" value="c"
+                                                            [(ngModel)]="questions.value">
+                                                        C.</b>{{questions.c}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    [ngStyle]="{'background-color': (d == questions.valuetrue) ?colortrue:(d == questions.value)?colorfalse:'white'}">
+                                                    <b class="fa"><input type="radio" [name]="questions.value" value="d"
+                                                            [(ngModel)]="questions.value" [disabled]="dis">
+                                                        D.</b>{{questions.d}}
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="card-footer">
+
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i [ngClass]="{'disable': ceil(config.currentPage) === 1}"
-                                style="font-size: 30px; color: #222; margin: 0 15px" class="fa fa-arrow-circle-up"
-                                (click)="onGetFirstPage()"></i>
-                            <i [ngClass]="{'disable': ceil(config.currentPage) === 1}"
-                                style="font-size: 30px; color:  #222; margin: 0 15px" class="fa fa-arrow-circle-left"
-                                (click)="onPrevPage()"></i>
-                            <i [ngClass]="{'disable': ceil(config.currentPage) === ceil(config.totalItems / config.itemsPerPage)}"
-                                style="font-size: 30px; color:  #222; margin: 0 15px" class="fa fa-arrow-circle-right"
-                                (click)="onNextPage()"></i>
-                            <i [ngClass]="{'disable': ceil(config.currentPage) === ceil(config.totalItems / config.itemsPerPage)}"
-                                style="font-size: 30px; color:  #222; margin: 0 15px" class="fa fa-arrow-circle-down"
-                                (click)="onGetLastPage()"></i>
+                        </div>
+                    </div>
 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+
+                    <ul>
+                    
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                    
+                    </ul>
+
+
+                </div>
+                <div class="card container result" [hidden]="!hiden">
+                    <div class="card-header">SBD: 3001180198</div>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-warning">Cảnh Báo</button> <button type="button"
+                            class="btn btn-outline-success">Thành Công</button>
+                        <h3>Khả Năng Hoàn Thành- <b class="showkq">{{complete}} %</b></h3><br>
+                        <h3>Danh Sách Đúng<b class="showkq"> {{question.length-socausai}}/{{question.length}}</b> </h3>
+                        <br>
+                        <h3>Danh Sách Sai<b class="showkq"> {{socausai}}/{{question.length}}</b> </h3> <br>
+                    </div>
+                    <div class="card-footer">
+                        <h2>Điểm Tổng <b class="showkq">{{tong}}</b> </h2>
+                    </div>
+                </div>
+                <div class="btnsubmit"><button class="btn btn-primary" (click)="onSubmit();">{{hiden?back:nopbai}}
+                    </button></div>
+
+            </form>
+
+
         </div>
-
 
 
         <div class="col-md-4">
@@ -149,17 +173,13 @@
                                         <li class="list-group-item">Lập Trình PHP</li>
                                         <li class="list-group-item">Lập trình Android nâng cao</li>
                                         <li class="list-group-item">Lập trình Android cơ bản</li>
-                                        <li class="list-group-item">Thiết kế layout</li>
-                                        <li class="list-group-item">Thiết kê giao diện Android</li>
-                                        <li class="list-group-item">Quản lý dự án với Aglie</li>
-                                        <li class="list-group-item">Internet Maketing</li>
-                                        <li class="list-group-item">Lập trình hướng đối tượng Java</li>
-                                        <li class="list-group-item">Lập trình ASP.NET</li>
+                                     
                                     </ul>
                                 </div>
                         </ul>
                     </div>
                 </div>
+
 
 
             </div>
@@ -172,121 +192,3 @@
 
 
 </div>
-<div class="row container" [hidden]="!a">
-    <div class="card">
-        <div class="card-body">Tong diem laf :{{tong}} <br>
-            so cau sai / so cau dung :{{socausai}}/{{socaudung}}
-        </div>
-    </div>
-</div>
-<div>
-
-    <button class="btn btn-dark" (click)="onsubmit();">Nộp Bài</button>
-    <h5 class="text-right" style="font-family: 'VT323', monospace;"><span
-            style="font-weight: bold; font-family: 'Fira Code', monospace;">Time Out:</span> {{format(time)}}
-    </h5>
-
-
-</div> -->
-<form>
-    <div class="row" style="margin-top: 50px">
-        <div class="col-md-8">
-            <h2>Kiểm Tra lập trình PHP căn bản</h2><br>
-            <h4>Thời gian :120'</h4><br>
-        </div>
-        <div class="col-md-4" [hidden]="anvinhvien">
-            <iframe src="./assets/image/abcd/abcd.html" frameborder="0" allowtransparency="true" scrolling="yes"
-                width="100%" height="200px" [hidden]="hiden">
-                <p>Your browser does not support iframes.</p>
-            </iframe>
-        </div>
-    </div>
-    <div class="container-fluid row" style="margin-bottom: 50px;" [hidden]="hiden"><br>
-        <div class="col-md-9">
-            <div class="mar-left">
-
-                <div class="card">
-                    <div class="card-header">Trương Ngọc Hải</div>
-                    <div class="card-body">
-                        <table class="table">
-                            <tbody
-                                *ngFor="let questions of question | orderBy: nameno | paginate: { itemsPerPage: itempage, currentPage: p }">
-
-                                <tr>
-                                    <td>{{questions.stt}}.{{questions.debai}}</td>
-                                </tr>
-
-                                <tr>
-                                    <td>{{questions.cauhoi}} </td>
-                                </tr>
-                                <tr>
-                                    <td
-                                        [ngStyle]="{'background-color': (a == questions.valuetrue)? colortrue:(a == questions.value)?colorfalse:'white' }">
-                                        <b class="fa"><input type="radio" [name]="questions.value" value="a"
-                                                [(ngModel)]="questions.value">
-                                            A.</b>{{questions.a}}</td>
-                                </tr>
-                                <tr>
-                                    <td
-                                        [ngStyle]="{'background-color': (b == questions.valuetrue) ? colortrue:(b == questions.value)?colorfalse:'white' }">
-                                        <b class="fa"><input type="radio" [name]="questions.value" value="b"
-                                                [(ngModel)]="questions.value">
-                                            B.</b>{{questions.b}}</td>
-                                </tr>
-                                <tr>
-                                    <td
-                                        [ngStyle]="{'background-color': (c == questions.valuetrue) ?colortrue:(c == questions.value)?colorfalse:'white' }">
-                                        <b class="fa"><input type="radio" [name]="questions.value" value="c"
-                                                [(ngModel)]="questions.value">
-                                            C.</b>{{questions.c}}</td>
-                                </tr>
-                                <tr>
-                                    <td
-                                        [ngStyle]="{'background-color': (d == questions.valuetrue) ?colortrue:(d == questions.value)?colorfalse:'white'}">
-                                        <b class="fa"><input type="radio" [name]="questions.value" value="d"
-                                                [(ngModel)]="questions.value" [disabled]="dis"> D.</b>{{questions.d}}
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="card-footer">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <ul>
-            <!-- <li class="page-item"><a class="page-link" (click)="Previous()"><i class="fa fa-angle-double-left"
-                        aria-hidden="true"></i>Previous </a></li>
-            <li class="page-item"> -->
-            <pagination-controls (pageChange)="p = $event"></pagination-controls>
-            <!-- </li> -->
-            <!-- <li class="page-item"><a class="page-link" (click)="next()"> Next<i class="fa fa-angle-double-right"
-                        aria-hidden="true"></i> </a></li> -->
-        </ul>
-
-
-    </div>
-    <div class="card container result" [hidden]="!hiden">
-        <div class="card-header">Trương Ngọc Hải 3001180208</div>
-        <div class="card-body">
-            <button type="button" class="btn btn-outline-warning">Warning</button> <button type="button"
-                class="btn btn-outline-success">Success</button>
-            <h3>Mức độ hoàn thành : <b class="showkq">{{complete}} %</b></h3><br>
-            <h3>Số câu đúng :<b class="showkq"> {{question.length-socausai}}/{{question.length}}</b> </h3><br>
-            <h3>Số câu sai :<b class="showkq"> {{socausai}}/{{question.length}}</b> </h3> <br>
-        </div>
-        <div class="card-footer">
-            <h2>Tổng điểm : <b class="showkq">{{tong}}</b> </h2>
-        </div>
-    </div>
-    <div class="btnsubmit"><button class="btn btn-primary" (click)="onSubmit();">{{hiden?back:nopbai}} </button></div>
-
-</form>
-<!-- <h5 class="text-right" style="font-family: 'VT323', monospace;"><span
-        style="font-weight: bold; font-family: 'Fira Code', monospace;">Time Out:</span> {{format(time)}}
-</h5> -->

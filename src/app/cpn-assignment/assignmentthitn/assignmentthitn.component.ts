@@ -49,21 +49,22 @@ export class AssignmentthitnComponent implements OnInit {
   //   tong = 0;
   //   socaudung = 0;
   //   socausai = 0;
-  //   listChoose = []
-  //   listSubjects = []
-  //   config: any
-  //   list: any
+  listChoose = []
+  listSubjects = []
+  // config: any
+  // list: any
 
 
-  //   changed(choose, index) {
-  //     this.listChoose[index] = choose
-  //   }
-  //   sub
-  //   time = 30 * 30
-  //   // Format: hh:mm:ss
-  //   format(time) {
-  //     return formatTime(time)
-  //   }
+  changed(choose, index) {
+    this.listChoose[index] = choose
+  }
+  sub
+  id
+  time = 30 * 30
+  // Format: hh:mm:ss
+  format(time) {
+    return formatTime(time)
+  }
 
   //   submit() {
   //     let mark = 0
@@ -187,22 +188,22 @@ export class AssignmentthitnComponent implements OnInit {
 
   //     })
 
-  //     this.config = {
-  //       itemsPerPage: 1,
-  //       currentPage: 1,
-  //       totalItems: this.listSubjects.length
-  //     };
+  // this.config = {
+  //   itemsPerPage: 1,
+  //   currentPage: 1,
+  //   totalItems: this.listSubjects.length
+  // };
 
 
 
-  //     this.listChoose = this.listSubjects.map((subjects) => {
-  //       return 0
-  //     })
+  // this.listChoose = this.listSubjects.map((subjects) => {
+  //   return 0
+  // })
 
-  //     // decrease seconds
-  //     setInterval(() => {
-  //       --this.time
-  //     }, 1000)
+  // decrease seconds
+  // setInterval(() => {
+  //   --this.time
+  // }, 1000)
   //   }
 
 
@@ -223,11 +224,14 @@ export class AssignmentthitnComponent implements OnInit {
     });
 
     this.list = copy;
+    setInterval(() => {
+      --this.time;
+    }, 1000);
   }
   title = 'lab4';
   itempage = 1;
   hiden = false;
-  back = 'Xem lại câu trả lời của bạn';
+  back = 'Xem lại câu trả lời ';
   nopbai = 'Nộp Bài'
   tong: number;
   socausai: number;
@@ -425,15 +429,13 @@ export class AssignmentthitnComponent implements OnInit {
   dapansai(a, b, c, d) {
     if (d != a && d != b && d != c) {
       return true;
-
     }
-
   }
   lisst(a, b) {
-
     if (a != b) {
       return true;
     }
   }
 }
+
 

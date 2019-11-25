@@ -36,39 +36,13 @@
                         padding: 4px 12px 4px 12px;
                         margin-top: 0px;
                          margin-bottom: 16px;
-                        font-weight: 60px ; font-family: Arial, Helvetica, sans-serif">Đăng nhập
+                        font-weight: 90px ; font-family: Arial, Helvetica, sans-serif">Login
                     </div>
 
                     <div class="alert alert-error text-body margin-bottom-12 col-md-12" role="alert"
                         aria-live="assertive" aria-relevant="text" aria-atomic="true"
                         data-bind="visible: error, html: error" style="display: none;"></div>
-                    <!-- <div class="row margin-bottom-16">
-                        <div class="form-group col-md-12 placeholderContainer">
-                            <input type="email" class="form-control" placeholder="Email, điện thoại hoặc Skype"
-                                aria-required="true" aria-label="Email, điện thoại hoặc Skype" spellcheck="false"
-                                autocomplete="off"
-                                data-bind="hasFocus: focus, textInput: email,
-                                    attr: {'placeholder': config.text.emailPlaceHolder, 'aria-label': config.text.emailPlaceHolderAria, 'aria-invalid': !error}"
-                                style="border-color: rgba(0,0,0,0.6);
-                                    border-top-width: 0px;
-                                    border-left-width: 0px;
-                                    border-right-width: 0px;
-                                    border-bottom-width: 1px;
-                                    border-radius: 0px;">
-
-                        </div> -->
-                    <!-- <div class="form-group col-md-12 placeholderContainer">
-                            <input type="password" class="form-control" placeholder="Password" aria-required="true"
-                                aria-label="Email, điện thoại hoặc Skype" spellcheck="false" autocomplete="off"
-                                data-bind="hasFocus: focus, textInput: email,
-                                    attr: {'placeholder': config.text.emailPlaceHolder, 'aria-label': config.text.emailPlaceHolderAria, 'aria-invalid': !error}"
-                                style="border-color: rgba(0,0,0,0.6);
-                                    border-top-width: 0px;
-                                    border-left-width: 0px;
-                                    border-right-width: 0px;
-                                    border-bottom-width: 1px;
-                                    border-radius: 0px;">
-                        </div> -->
+            
                     <div class="a">
                         <div class="b row">
                             <div class="col-md-12">
@@ -78,13 +52,13 @@
                                             (ngSubmit)="onsubmit(signin);" #signin="ngForm">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id="uname"
-                                                    placeholder="Username" name="uname" [(ngModel)]="uname" required>
+                                                    placeholder="Tài Khoản" name="uname" [(ngModel)]="uname" required>
                                             </div>
                                             <div class="form-group">
                                                 <input [type]="showpassword" class="form-control" id="email"
-                                                    placeholder="Password" name="pass" [(ngModel)]="pass" required>
+                                                    placeholder="Mật Khẩu" name="pass" [(ngModel)]="pass" required>
                                                 <span toggle="#password-field"
-                                                    class="fas fa-fw field-icon toggle-password" style="color: brown"
+                                                    class="fas fa-fw field-icon toggle-password" style="color: olive"
                                                     (click)="hello()">
                                                     <b [ngClass]="{'fa-eye': anhien}"></b>
                                                     <b [ngClass]="{'fa-eye-slash': hienan}"></b></span>
@@ -98,7 +72,7 @@
 
                     <div class="row margin-bottom-20">
                         <div class="col-md-12 section text-secondary">
-                            <span data-bind="text: config.text.noAccount">Bạn không có tài khoản?</span>
+                            <span data-bind="text: config.text.noAccount">Chưa có tài khoản?</span>
                             <a href="dangky" aria-label="Tạo tài khoản Microsoft"
                                 data-bind="text: config.text.createAccount, attr: {'aria-label': config.text.createAccountAria}, click: msAccountSignUp">Hãy
                                 tạo tài khoản!</a>
@@ -115,8 +89,8 @@
 
 
                 <div class="form-group" style="padding-left: 220px;">
-                    <button type="submit" class="btn btn-warning" (click)="dangnhap();" [disabled]="signin.invalid">
-                        Đăng Nhập</button>
+                    <button type="submit" class="btn btn-primary" style="color: white;" (click)="dangnhap();" [disabled]="signin.invalid">
+                        Login</button>
                 </div>
             </main>
         </div>

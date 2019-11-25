@@ -1,32 +1,32 @@
 export const subjects = [
-    {
-        "id": "ADAV",
-        "name": "Lập trình Android nâng cao",
-        "imageUrl": "ADAV.jpg"
-    },
+        // {
+        //     "id": "ADAV",
+        //     "name": "Lập trình Android nâng cao",
+        //     "imageUrl": "ADAV.jpg"
+        // },
 
-    {
-        "id": "ADBS",
-        "name": "Lập trình Android cơ bản",
-        "imageUrl": "ADBS.jpg"
-    },
-    {
-        "id": "ADTE",
-        "name": "Kiểm thử và triển khai ứng dụng Android",
-        "imageUrl": "ADTE.jpg"
-    },
-    {
+        // {
+        //     "id": "ADBS",
+        //     "name": "Lập trình Android cơ bản",
+        //     "imageUrl": "ADBS.jpg"
+        // },
+        // {
+        //     "id": "ADTE",
+        //     "name": "Kiểm thử và triển khai ứng dụng Android",
+        //     "imageUrl": "ADTE.jpg"
+        // },
+        // {
 
-        "id": "ADUI",
-        "name": "Thiết kế giao diện trên Android",
-        "imageUrl": "ADUI.jpg"
-    },
-    {
+        //     "id": "ADUI",
+        //     "name": "Thiết kế giao diện trên Android",
+        //     "imageUrl": "ADUI.jpg"
+        // },
+        // {
 
-        "id": "ASNE",
-        "name": "Lập trình ASP.NET",
-        "imageUrl": "ASNE.png"
-    },
+        //     "id": "ASNE",
+        //     "name": "Lập trình ASP.NET",
+        //     "imageUrl": "ASNE.png"
+        // },
     {//maays cais sau tu them nghe
         "id": "CLCO",
         "name": "Điện toán đám mây",
